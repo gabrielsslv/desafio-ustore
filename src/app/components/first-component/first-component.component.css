@@ -1,0 +1,30 @@
+
+
+
+.spacer {
+  flex: 1;
+  font-family: sans-serif;
+}
+
+h2 {
+  color: black;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar span {
+  color: rgb(245, 241, 241);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 10px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+</head>
+<body>
+
+  <div class="container">
+    <form>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nome">
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="form-group">
+            <input type="preco" class="form-control" id="exampleInputPassword1" placeholder="Preço">
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="form-group">
+            <input type="validade" class="form-control" id="exampleInputPassword1" placeholder="Validade">
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 col-4 mx-auto">
+          <button class="btn btn-primary btn-lg btn-block" type="button">Adicionar</button>
+        </div>
+      </div>
+      <hr size="50">
+    </form>
+
+    <div class="row">
+      <div class="container">
+        <table class="table table-hover">
+          <thead>
+            <tr class="topo-tabelas">
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Validade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody class="table-bordered">
+            <tr *ngFor="let produtos of produtos">
+              <td>
+                <div>{{produtos.nome}}</div>
+              </td>
+
+              <td>
+                <div>{{produtos.preco}}</div>
+              </td>
+
+              <td>
+                <div>{{produtos.validade}}</div>
+              </td>
+              <td>
+                <div class="d-grid gap-2 d-md-flex">
+                  <button class="btn btn-primary me-md-2 btn-warning" type="button">Editar</button>
+                  <button class="btn btn-primary btn-danger" type="button">Excluir</button>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
