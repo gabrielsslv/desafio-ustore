@@ -1,3 +1,4 @@
+import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { ProdutosService } from './produtos.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,13 +24,14 @@ import { DesafioComponent } from './desafio/desafio.component';
     IfRenderComponent,
     EventosComponent,
     ListRenderComponent,
-    DesafioComponent
+    DesafioComponent,
+    EditarProdutoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [ProdutosService, HttpClientModule],
   bootstrap: [AppComponent]

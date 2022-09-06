@@ -1,0 +1,18 @@
+<h2>Atualizar</h2>
+
+<div *ngIf="request">
+  <label>Nome:
+    <input placeholder="Nome:" [(ngModel)]="request.nome">
+  </label>
+  <br><br>
+  <label>Preço:
+    <input placeholder="Nome:" [(ngModel)]="request.preco">
+  </label>
+  <br><br>
+  <label>Validade:
+    <input placeholder="Nome:" [(ngModel)]="request.validade">
+  </label>
+  <br><br>
+
+  <button (click)="atualizar()">Atualizar</button>
+</div>

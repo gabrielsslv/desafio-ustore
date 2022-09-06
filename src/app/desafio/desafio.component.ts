@@ -1,6 +1,6 @@
 import { ProdutosService } from './../produtos.service';
 import { Component, OnInit } from '@angular/core';
-import { RequestCreate } from './produto.model';
+import { RequestCreate, ResponseCreate } from './produto.model';
 
 @Component({
   selector: 'app-desafio',
@@ -14,6 +14,7 @@ export class DesafioComponent implements OnInit {
     id: 0,
     nome: '',
     preco: 0,
+    validade: new Date,
     createdAt:  new Date,
     updatedAt: new Date
   }
@@ -31,5 +32,13 @@ export class DesafioComponent implements OnInit {
       console.log('Erro ao listar produtos', err)
     });
   };
+
+  save() {
+    this.ProdutosService.adicionarProduto(this.request).subscribe(res => {
+
+    });
+  }
+
+
 
 }

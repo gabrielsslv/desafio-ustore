@@ -13,24 +13,24 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="form-group">
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nome">
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nome" [(ngModel)]="request.nome" [ngModelOptions]="{standalone: true}">
           </div>
         </div>
 
         <div class="col-sm-4">
           <div class="form-group">
-            <input type="preco" class="form-control" id="exampleInputPassword1" placeholder="Preço">
+            <input type="preco" class="form-control" id="exampleInputPassword1" placeholder="Preço" [(ngModel)]="request.preco" [ngModelOptions]="{standalone: true}">
           </div>
         </div>
 
         <div class="col-sm-4">
           <div class="form-group">
-            <input type="validade" class="form-control" id="exampleInputPassword1" placeholder="Validade">
+            <input type="validade" class="form-control" id="exampleInputPassword1" placeholder="Validade" [(ngModel)]="request.validade" [ngModelOptions]="{standalone: true}">
           </div>
         </div>
 
         <div class="d-grid gap-2 col-4 mx-auto">
-          <button class="btn btn-primary btn-lg btn-block" type="button">Adicionar</button>
+          <button class="btn btn-primary btn-lg btn-block" type="button" (click)="save()">Adicionar</button>
         </div>
       </div>
       <hr size="50">
@@ -61,9 +61,10 @@
               <td>
                 <div>{{produtos.validade}}</div>
               </td>
+
               <td>
                 <div class="d-grid gap-2 d-md-flex">
-                  <button class="btn btn-primary me-md-2 btn-warning" type="button">Editar</button>
+                  <button class="btn btn-primary me-md-2 btn-warning" type="button"><a routerLink="/produtos/editar/{{produtos.id}}">Editar</a></button>
                   <button class="btn btn-primary btn-danger" type="button">Excluir</button>
                 </div>
               </td>
